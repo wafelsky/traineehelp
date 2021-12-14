@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import {mapActions} from "vuex";
+
 export default {
   name: 'Home',
   components: {},
@@ -21,13 +23,17 @@ export default {
   this.usersName = this.$store.getters.getUsersName
   },
    methods: {
+     ...mapActions([
+       'setLogged', // map `this.increment()` to `this.$store.dispatch('increment')`
+     ]),
     but(){
       if(this.userName=="test" && this.userPass=="test"){
+        this.setLogged(this.userName)
         this.$router.push("/Tlog")
       }else{
         this.$router.push("/Flog")
       }
-     
+
     }
   }
 
