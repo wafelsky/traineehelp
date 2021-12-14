@@ -27,7 +27,7 @@ export default {
        'setLogged', // map `this.increment()` to `this.$store.dispatch('increment')`
      ]),
     but(){
-      if(this.userName=="test" && this.userPass=="test"){
+      if(this.userName==="test" && this.userPass==="test"){
         this.setLogged(this.userName)
         this.$router.push("/Tlog")
       }else{

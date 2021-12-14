@@ -28,7 +28,7 @@ const actions = {
 }
 
 const getters =      {
-    getUsersName: state => state.usersName || 'nie zalogowany'
+    getUsersName: state => state.usersName || 'nie jestes zalogowany'
 }
 
 
